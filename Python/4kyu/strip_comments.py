@@ -21,24 +21,9 @@ def solution(string,markers):
     # Create new line
     string_list = string.split('\n')
     
-    # Create an empty list
-    stripped_list = []
-    
-    # Now loop through strings
-    for string in string_list:
-        string = ''
-        for character in string:
-            # If statement to check for markers
-            if character in markers:
-                # If marker found break loop
-                break
-            else:
-                # If not marker, continue
-                string = string + character
-            
-            # Now appended the cleaned and stripped content to the empty list
-            stripped_list.append(string.strip())
-    
-    return "\n".join(stripped_list)
+    # Loop through markers list
+    for marker in markers:
+        string_list = [i.split(marker)[0].strip() for i in string_list]
+    return "\n".join(string_list)
     
 
