@@ -18,22 +18,22 @@ result = solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", 
 '''
 
 def solution(string,markers):
-    # Strip the string argument passed
+    # Create new line
     string_list = string.split('\n')
     
-    # Create an empty list for storing stripped strings
+    # Create an empty list
     stripped_list = []
     
-    # Loop through strings in string list
+    # Now loop through strings
     for string in string_list:
         string = ''
         for character in string:
-            # If statement to check if passed character is in markers
+            # If statement to check for markers
             if character in markers:
-                # If found break loop
+                # If marker found break loop
                 break
             else:
-                # If not continue with loop
+                # If not marker, continue
                 string = string + character
             
             # Now appended the cleaned and stripped content to the empty list
