@@ -26,8 +26,8 @@ NOTE: Your solution should use pure SQL. Ruby is used within the test cases to d
 */
 
 --- Code below
-SELECT id, COALESCE(name, 'product name not found') AS name, NULLIF(price,price) as price, 
-COALESCE(card_name, 'card name not found') AS card_name, card_number, transaction_date
+SELECT id, COALESCE(NULLIF(name, ''), 'product name not found') AS name, price, 
+COALESCE(NULLIF(card_name, ''), 'card name not found') AS card_name, card_number, transaction_date
 FROM eusales
 WHERE price IS NOT NULL
 AND price >= 50
