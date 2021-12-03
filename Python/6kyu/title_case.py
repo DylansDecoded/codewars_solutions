@@ -29,7 +29,7 @@ def title_case(title, minor_words=''):
     word_list = []
     
     for word in title.split():
-        # Check if word in title list not in minor_words
+        # Check if word in title list not in minor_words and if word_list is not 0
         if word.lower() not in minor_words.lower().split() or len(word_list) == 0:
             # append the word to word list that meets requirements
             word_list.append(word.title())
