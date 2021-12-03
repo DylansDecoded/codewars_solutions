@@ -16,4 +16,4 @@ def find_needle(haystack):
     '''
     
     # Now print the required print out and index for needle
-    return 'found the needle at position {}'.format(haystack.index('needle')))
+    return 'found the needle at position {}'.format(haystack.index('needle'))
